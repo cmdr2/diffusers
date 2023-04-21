@@ -1,4 +1,4 @@
-__version__ = "0.15.0.dev0"
+__version__ = "0.16.0.dev0"
 
 from .configuration_utils import ConfigMixin
 from .utils import (
@@ -109,7 +109,6 @@ try:
 except OptionalDependencyNotAvailable:
     from .utils.dummy_torch_and_transformers_objects import *  # noqa F403
 else:
-    from .loaders import TextualInversionLoaderMixin
     from .pipelines import (
         AltDiffusionImg2ImgPipeline,
         AltDiffusionPipeline,
@@ -137,6 +136,7 @@ else:
         StableUnCLIPImg2ImgPipeline,
         StableUnCLIPPipeline,
         TextToVideoSDPipeline,
+        TextToVideoZeroPipeline,
         UnCLIPImageVariationPipeline,
         UnCLIPPipeline,
         VersatileDiffusionDualGuidedPipeline,
